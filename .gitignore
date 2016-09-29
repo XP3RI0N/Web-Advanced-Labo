@@ -1,2 +1,2 @@
-#Untracked files:
-	/.idea
+#Ignore folders:
+.idea/*
