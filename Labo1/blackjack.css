@@ -1,0 +1,102 @@
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+/* Reset CSS */
+
+body {
+	font-family: Atma, Tahoma, Geneva, sans-serif;
+	background-color: #345631;
+}
+
+body > section {
+	width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	margin: 25px 0;
+	font-size: 3rem;
+	font-weight: 100;
+	color: #ffffff;
+}
+
+form {
+	background-color: #cccccc;
+	border-radius: 10px;
+}
+
+form input {
+	width: 100px;
+	height: 50px;
+	margin: 5px;
+	border-radius: 8px;
+	font-family: inherit;
+	font-size: 1.4rem;
+	cursor: pointer;
+	background: linear-gradient(to bottom, #ffffff 0%, #aaaaaa 50%, #ffffff 100%)
+}
+
+form input:not([disabled]):hover {
+	background: linear-gradient(to bottom, #aaaaaa 0%, #ffffff 50%, #aaaaaa 100%)
+}
+
+.playarea, .score, .chips {
+	display: inline-block;
+	height: 175px;
+	margin: 5px 3px;
+	border: 1px solid #a5ff54;
+	border-radius: 10px;
+	float: left;
+}
+
+.playarea {
+	width: 640px;
+}
+
+.score {
+	width: 140px;
+}
+
+.chips {
+	height: auto;
+}
+
+.chip {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 1.3rem;
+	border: 6px dashed #ffffff;
+	border-radius: 50%;
+	color: #ffffff;
+	background-color: #8a8a8a;
+}
+
+.black {
+	background-color: #252525;
+}
+
+.red {
+	background-color: #a70000;
+}
+
+.blue {
+	background-color: #000098;
+}
+
+.card {
+	float: left;
+	width: 94px;
+	height: 137px;
+	margin: 18px 5px 0 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}

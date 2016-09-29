@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Blackjack</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="blackjack.css">
+</head>
+<body>
+<section>
+	<h1>Blackjack</h1>
+	<div id="result"></div>
+	<form>
+		<input type="button" value="deal" id="deal" name="deal"/>
+		<input type="button" value="hit" id="hit" name="hit" disabled/>
+		<input type="button" value="stand" id="stand" name="stand" disabled/>
+		<div id="stake"></div>
+	</form>
+	<section>
+		<div id="dealer" class="playarea"></div>
+		<div id="dealerScore" class="score">10</div>
+	</section>
+	<section>
+		<div id="player" class="playarea"></div>
+		<div id="playerScore" class="score">10</div>
+	</section>
+	<section>
+		<div id="chips" class="chips">
+			<div class="chip black ">0</div>
+			<div class="chip">+1</div>
+			<div class="chip red">+5</div>
+			<div class="chip blue">+10</div>
+		</div>
+	</section>
+</section>
+<!-- JavaScript -->
+<script src="blackjack.js"></script>
+</body>
+</html>
