@@ -7,8 +7,8 @@ var arrCards = new Array("ace", "two", "three", "four", "five", "six", "seven", 
 	stand,
 	player,
 	dealer,
-	playerScore,
-	dealerScore;
+	playerScore = 0,
+	dealerScore = 0;
 
 function dealClick() {
 	startGame();
@@ -52,7 +52,19 @@ function getRandom(max) {
 }
 
 function checkScore() {
+	document.getElementById("playerScore").innerHTML = playerScore.toString();
+	document.getElementById("dealerScore").innerHTML = dealerScore.toString();
 
+	if (playerScore > 21) winner(dealer)
+}
+
+function winner(person) {
+	var message = document.getElementById("result");
+	if (person === dealer) {
+		message.innerHTML = "Dealer wins!";
+	} else if (person === player) {
+		message.innerHTML = "Player wins!"
+	}
 }
 
 function disableControls(dealButtonDisabled, hitButtonDisnabled, standButtonDisnabled) {
@@ -67,10 +79,17 @@ function resetGame() {
 
 function hitClick() {
 	playCard(player, 1);
+	checkScore();
 }
 
 function standClick() {
 	disableControls(true, true, true);
+	while (dealerScore < playerScore) {
+		playCard(dealer, 1);
+		checkScore();
+	}
+	if (dealerScore >= playerScore && dealerScore <= 21) winner(dealer);
+	else winner(player);
 }
 
 function initializeElements() {

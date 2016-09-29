@@ -100,3 +100,10 @@ form input:not([disabled]):hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+.score {
+	text-align: center;
+	line-height: 175px;
+	font-size: 3rem;
+	color: #ffffff;
+}
