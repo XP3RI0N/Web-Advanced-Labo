@@ -8,10 +8,18 @@ var arrCards    = new Array("ace", "two", "three", "four", "five", "six", "seven
 	player,
 	dealer,
 	playerScore = 0,
-	dealerScore = 0;
+	dealerScore = 0,
+	chipCount   = 100,
+	resetChip,
+	chip1,
+	chip5,
+	chip10,
+	inzet = 0,
+	playing = false;
 
 function dealClick() {
 	startGame();
+	playing = true;
 }
 
 function startGame() {
@@ -62,19 +70,29 @@ function winner(person) {
 	var message = document.getElementById("result");
 	if (person === dealer) {
 		message.innerHTML = "Dealer wins!";
-		disableControls(false, true, true);
 		setTimeout(function () {
 			document.getElementById("result").innerHTML = "";
 			resetGame();
+			disableControls(true, true, true);
 		}, 1500);
 	} else if (person === player) {
 		message.innerHTML = "Player wins!"
-		disableControls(false, true, true);
+		geefPrijs();
 		setTimeout(function () {
 			document.getElementById("result").innerHTML = "";
 			resetGame();
 		}, 1500);
 	}
+
+	playing = false;
+	inzet = 0;
+	document.getElementById("inzet").innerHTML = "0";
+}
+
+function geefPrijs() {
+	var prijs = inzet * 2;
+	chipCount += prijs;
+	document.getElementById("aantalChips").innerHTML = chipCount.toString();
 }
 
 function disableControls(dealButtonDisabled, hitButtonDisnabled, standButtonDisnabled) {
@@ -91,6 +109,7 @@ function resetGame() {
 	playerScore = 0;
 	dealerScore = 0;
 	checkScore();
+	document.getElementById("aantalChips").innerHTML = chipCount.toString();
 }
 
 function hitClick() {
@@ -109,17 +128,47 @@ function standClick() {
 }
 
 function initializeElements() {
-	deal   = document.getElementById("deal");
-	hit    = document.getElementById("hit");
-	stand  = document.getElementById("stand");
-	player = document.getElementById("player");
-	dealer = document.getElementById("dealer");
+	deal      = document.getElementById("deal");
+	hit       = document.getElementById("hit");
+	stand     = document.getElementById("stand");
+	player    = document.getElementById("player");
+	dealer    = document.getElementById("dealer");
+	var chips = document.querySelectorAll(".chip");
+	resetChip = chips[0];
+	chip1     = chips[1];
+	chip5     = chips[2];
+	chip10    = chips[3];
 }
 
 function addEventListeneners() {
 	deal.addEventListener("click", dealClick);
 	hit.addEventListener("click", hitClick);
 	stand.addEventListener("click", standClick);
+	resetChip.addEventListener("click", function () {
+		zetInzet(inzet * -1)
+	});
+	chip1.addEventListener("click", function () {
+		if (chipCount < 1) return;
+		zetInzet(1);
+	});
+	chip5.addEventListener("click", function () {
+		if (chipCount < 5) return;
+		zetInzet(5);
+	});
+	chip10.addEventListener("click", function () {
+		if (chipCount < 10) return;
+		zetInzet(10);
+	});
+}
+
+function zetInzet(aantal) {
+	if (playing == true) return;
+	inzet += aantal;
+	document.getElementById("inzet").innerHTML = inzet.toString();
+	chipCount -= aantal;
+	document.getElementById("aantalChips").innerHTML = chipCount.toString();
+	if (inzet > 0) disableControls(false, true, true);
+	else disableControls(true, true, true);
 }
 
 function init() {

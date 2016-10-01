@@ -10,7 +10,7 @@
 	<h1>Blackjack</h1>
 	<div id="result"></div>
 	<form>
-		<input type="button" value="deal" id="deal" name="deal"/>
+		<input type="button" value="deal" id="deal" name="deal" disabled/>
 		<input type="button" value="hit" id="hit" name="hit" disabled/>
 		<input type="button" value="stand" id="stand" name="stand" disabled/>
 		<div id="stake"></div>
@@ -30,7 +30,7 @@
 			<div class="chip red">+5</div>
 			<div class="chip blue">+10</div>
 		</div>
-		<div class="chipCount">100</div>
+		<div class="chipCount" id="aantalChips">100</div>
 		<div class="chipCount" id="inzet">0</div>
 	</section>
 </section>
