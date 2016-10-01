@@ -45,7 +45,7 @@ form input:not([disabled]):hover {
 	background: linear-gradient(to bottom, #aaaaaa 0%, #ffffff 50%, #aaaaaa 100%)
 }
 
-.playarea, .score, .chips, #chipCount {
+.playarea, .score, .chips, .chipCount {
 	display: inline-block;
 	height: 175px;
 	margin: 5px 3px;
@@ -66,7 +66,7 @@ form input:not([disabled]):hover {
 	height: auto;
 }
 
-#chipCount {
+.chipCount {
 	height: 110px;
 	line-height: 110px;
 	padding: 0 25px;
@@ -126,4 +126,9 @@ form input:not([disabled]):hover {
 	font-size: 10rem;
 	text-align: center;
 	z-index: 2;
+}
+
+#inzet {
+	float: right;
+	margin-right: 11px;
 }
