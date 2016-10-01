@@ -45,7 +45,7 @@ form input:not([disabled]):hover {
 	background: linear-gradient(to bottom, #aaaaaa 0%, #ffffff 50%, #aaaaaa 100%)
 }
 
-.playarea, .score, .chips {
+.playarea, .score, .chips, #chipCount {
 	display: inline-block;
 	height: 175px;
 	margin: 5px 3px;
@@ -64,6 +64,14 @@ form input:not([disabled]):hover {
 
 .chips {
 	height: auto;
+}
+
+#chipCount {
+	height: 110px;
+	line-height: 110px;
+	padding: 0 25px;
+	font-size: 3rem;
+	color: #ffffff;
 }
 
 .chip {
@@ -99,6 +107,8 @@ form input:not([disabled]):hover {
 	margin: 18px 5px 0 5px;
 	background-size: cover;
 	background-repeat: no-repeat;
+
+	z-index: 1;
 }
 
 .score {
@@ -106,4 +116,14 @@ form input:not([disabled]):hover {
 	line-height: 175px;
 	font-size: 3rem;
 	color: #ffffff;
+}
+
+#result {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: TranslateX(-50%) TranslateY(-55%);
+	font-size: 10rem;
+	text-align: center;
+	z-index: 2;
 }
