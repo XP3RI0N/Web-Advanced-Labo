@@ -37,7 +37,7 @@ function playCard(person, nummerOfCards) {
 		div.classList.add("card");
 		// een random getal tussen 0 en 13
 		var random                = getRandom(arrCards.length);
-		div.style.backgroundImage = "url(images/" + arrCards[random] + eval(getRandom(3) + 1) + ".png)"
+		div.style.backgroundImage = "url(images/" + arrCards[random] + eval(getRandom(3) + 1) + ".png)";
 
 		var transformDeg    = Math.floor(Math.random() * 7) + 1;
 		transformDeg *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
@@ -76,7 +76,7 @@ function winner(person) {
 			disableControls(true, true, true);
 		}, 1500);
 	} else if (person === player) {
-		message.innerHTML = "Player wins!"
+		message.innerHTML = "Player wins!";
 		geefPrijs();
 		setTimeout(function () {
 			document.getElementById("result").innerHTML = "";
@@ -90,8 +90,7 @@ function winner(person) {
 }
 
 function geefPrijs() {
-	var prijs = inzet * 2;
-	chipCount += prijs;
+	chipCount += inzet * 2;
 	document.getElementById("aantalChips").innerHTML = chipCount.toString();
 }
 
