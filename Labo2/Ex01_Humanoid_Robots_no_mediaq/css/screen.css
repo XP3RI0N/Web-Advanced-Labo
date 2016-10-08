@@ -1,0 +1,140 @@
+@import url("reset.css");
+@import 'https://fonts.googleapis.com/css?family=Oswald:300,400,700&subset=latin-ext';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css';
+
+body {
+	font-family: Oswald, Helvetica, Arial, sans-serif;
+	font-size: 1.2rem;
+}
+
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0 50px;
+}
+
+.active {
+	font-weight: bold;
+}
+
+nav {
+	background-color: #a11d0c;
+}
+
+nav div ul {
+	display: flex;
+}
+
+nav div ul li a {
+	display: block;
+	padding: 15px 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: lighter;
+	color: #ffffff;
+}
+
+header {
+	background-color: #d1d0c9;
+}
+
+header img {
+	padding: 10px 0;
+}
+
+.main {
+	width: calc(100% - 400px);
+}
+
+.main h1 {
+	margin: 15px 0;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.main section {
+	font-weight: 300;
+}
+
+.articleInfo {
+	font-weight: lighter;
+	margin-top: 5px;
+}
+
+.summary {
+	margin-right: 15px;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+.fullsize {
+	width: 100%;
+}
+
+aside {
+	width: 400px;
+}
+
+aside h2 {
+	margin: 25px 0;
+	font-family: "Times New Roman";
+	font-size: 1.2rem;
+}
+
+.related li {
+	margin: 20px 0;
+	padding-bottom: 10px;
+	border-bottom: dotted 1px #000000;
+}
+
+.related a {
+	line-height: 1.4em;
+	text-decoration: none;
+	color: #a11d0c;
+}
+
+.tags {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.tags li {
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	margin: 10px 20px;
+	padding: 0 15px;
+	background-color: #a11d0c;
+}
+
+.tags li:after {
+	box-sizing: border-box;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -40px;
+	z-index: -1;
+	border: 20px solid transparent;
+	border-right-color: #a11d0c;
+}
+
+.tags li:before {
+	box-sizing: border-box;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	z-index: 5;
+}
+
+.tags li a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 1rem;
+}
