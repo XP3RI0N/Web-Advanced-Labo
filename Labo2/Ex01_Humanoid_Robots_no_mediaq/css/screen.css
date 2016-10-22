@@ -56,6 +56,10 @@ header img {
 	font-weight: 300;
 }
 
+.main section p {
+	margin-right: 30px;
+}
+
 .articleInfo {
 	font-weight: lighter;
 	margin-top: 5px;
@@ -75,7 +79,7 @@ aside {
 	width: 400px;
 }
 
-aside h2 {
+aside h2, .more-stories h2 {
 	margin: 25px 0;
 	font-family: "Times New Roman";
 	font-size: 1.2rem;
@@ -137,4 +141,26 @@ aside h2 {
 	color: #ffffff;
 	text-decoration: none;
 	font-size: 1rem;
+}
+
+.more-stories {
+	width: 100%;
+}
+
+.slats {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.slats li {
+	flex-grow: 1;
+	margin: 20px 5px;
+}
+.slats li a {
+	text-decoration: none;
+}
+
+.slats li h3 {
+	color: #a11d0c;
 }
