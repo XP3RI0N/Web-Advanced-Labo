@@ -1,0 +1,36 @@
+@import url('reset.css');
+@import 'https://fonts.googleapis.com/css?family=Josefin+Slab';
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Josefin Slab', Arial, sans-serif;
+	background-image: url("../images/img.jpg");
+	background-size: cover;
+}
+
+nav {
+	margin-top: 5em;
+	width: 100%;
+}
+
+nav ul {
+	width: fit-content;
+	margin: 0 auto;
+}
+
+a {
+	font-size: 5rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+	-webkit-filter: blur(5px);
+	transition: filter 0.5s, margin 0.5s;
+}
+
+a:hover {
+	-webkit-filter: none;
+	margin-left: 10px;
+}
