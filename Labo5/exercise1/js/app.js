@@ -58,10 +58,10 @@ function setMarkers() {
 
 					new google.maps.Marker({
 						position: {
-							lat : parseFloat(nodes[i].getAttribute("Lat").replace(",", ".")),
-							lng : parseFloat(nodes[i].getAttribute("Long").replace(",", ".")),
+							lat: parseFloat(nodes[i].getAttribute("Lat").replace(",", ".")),
+							lng: parseFloat(nodes[i].getAttribute("Long").replace(",", ".")),
 						},
-						icon: icon,
+						icon    : icon,
 						map     : map
 					})
 					;
